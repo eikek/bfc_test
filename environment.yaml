@@ -1,3 +1,23 @@
-name: stats
+# Note: name can be changed
+name: "base"
+channels:
+  # important: do not use 'defaults', but always include 'nodedefaults'
+  - conda-forge
+  - nodefaults
 dependencies:
-  - numpy
+  - python=3.9 # set your python version here
+  - tensorflow-gpu
+  - numba
+  - scikit-learn
+  - pandas
+  - seaborn
+  - matplotlib
+  - jupyterlab
+  - xarray
+  - pip
+  - pip:
+    # put packages to be installed by pip here
+    - deepsmiles
+    - rdkit
+# Note: prefix can be changed
+prefix: "/opt/conda"
